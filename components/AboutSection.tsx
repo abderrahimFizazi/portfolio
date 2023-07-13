@@ -2,17 +2,31 @@ import React from "react"
 import Image from "next/image"
 
 const skills = [
-  { skill: "HTML" },
-  { skill: "CSS" },
   { skill: "JavaScript" },
-  { skill: "TypeScript" },
   { skill: "Python" },
-  { skill: "React" },
-  { skill: "Next.js" },
+  { skill: "ReactJs" },
+  { skill: "NextJs" },
+  { skill: "Azure" },
+  { skill: "IBM Cloud" },
+  { skill: "Docker" },
+  { skill: "Bootstrap" },
   { skill: "Tailwind CSS" },
   { skill: "Git" },
   { skill: "GitHub" },
-  { skill: "Jupyter Notebooks" },
+  { skill: "Linux" },
+  { skill: "Shell" },
+  { skill: "C" },
+  { skill: "C++" },
+  { skill: "C#" },
+  { skill: "php" },
+  { skill: ".NET" },
+  { skill: "Java" },
+  { skill: "Nginx" },
+  { skill: "Apache2" },
+  { skill: "MySQL" },
+  { skill: "Mongodb" },
+  { skill: "Rails" },
+
 ]
 
 const AboutSection = () => {
@@ -30,24 +44,28 @@ const AboutSection = () => {
               Get to know me!
             </h1>
             <p>
-              Hi, my name is Hosna and I am a{" "}
+              Hi, my name is Abderrahim and I am a{" "}
               <span className="font-bold">{"highly ambitious"}</span>,
               <span className="font-bold">{" self-motivated"}</span>, and
-              <span className="font-bold">{" driven"}</span> software engineer
-              based in Los Angeles, CA.
+              <span className="font-bold">{" driven"}</span> student software engineer.
             </p>
             <br />
             <p>
-              I graduated from California State University, Northridge in 2019
-              with a BS in Computer Engineering and have been working in the
-              field ever since.
+            I have expertise in web development and cloud computing. Over the past three years, 
+             I have focused on React and Next.js, gaining 
+             proficiency in creating dynamic and interactive web applications.
             </p>
             <br />
             <p>
-              I have a wide range of hobbies and passions that keep me busy.
-              From reading, playing sports, traveling, to making YouTube videos,
-              I am always seeking new experiences and love to keep myself
-              engaged and learning new things.
+            I am passionate about cloud technologies and currently preparing to obtain the 
+            Azure Cloud Developer 204 certificate. Additionally, I have experience with 
+            IBM cloud infrastructure and have worked with both relational
+             and non-relational databases. My skill set also extends to desktop application development
+            </p>
+            <br/>
+            <p>
+            I am an active freelancer and engage in social activities, aiming to leverage technology 
+            for positive change in the community.
             </p>
             <br />
             <p>
@@ -76,7 +94,7 @@ const AboutSection = () => {
               })}
             </div>
             <Image
-              src="/hero-image.png"
+              src="/avt.png"
               alt=""
               width={325}
               height={325}
