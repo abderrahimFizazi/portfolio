@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import SlideUp from "./SlideUp"
 import { BsGithub, BsArrowUpRightSquare, } from "react-icons/bs"
-import { AiOutlineInstagram ,AiOutlineYoutube} from "react-icons/ai"
+import { AiOutlineInstagram ,AiOutlineYoutube, AiOutlineFilePdf} from "react-icons/ai"
 
 const projects = [
   {
@@ -20,17 +20,20 @@ const projects = [
     image: "/projects/g3ei.png",
     github: "https://github.com/abderrahimFizazi/g3ei",
     link: " https://abderrahimfizazi.github.io/g3ei/",
-    technologies: ["ReactJs","Laravel", "Bootstrap"],
-    youtube: "https://www.youtube.com/watch?v=uunhRpZU7Eo"
+    youtube: "https://www.youtube.com/watch?v=uunhRpZU7Eo",
+    technologies: ["ReactJs","Laravel", "Bootstrap","MySql"],
+
 
   },
   {
-    name: "Kator Family Photos",
+    name: "School system manager",
     description:
-      "Kator Family Photos is a photos and video digitization service in the LA area.",
-    image: "/familyphotos.png",
-    github: "https://github.com/hqasmei/katorfamilyphotos",
-    link: "https://katorfamilyphotos.com/",
+      "The School System Manager is a graduation project developed in our school's 3rd year, aiming to provide an attractive web application that offers flexible and optimal student management solutions. It enables the administrative staff at ENSAT to efficiently manage student data such as profiles, grades, and validations. Additionally, the project aims to create a student portal where engineering students can access their grades and contact professors via email. Throughout the project's development phases, our mission is to deploy various programming languages and tools that we have learned during this academic year, as well as through self-guided learning. We have also honed our teamwork, communication, and collaboration skills... you can find the project report down below",
+    image: "/projects/schoolsystem.png",
+    github: "https://github.com/abderrahimFizazi/react_laravel_school_system.git",
+    technologies: ["ReactJs","Laravel", "Bootstrap","MySql"],
+    youtube: "https://www.youtube.com/watch?v=VsRo9I5u5lY",
+    pdf: "/projects/RapportSM.pdf"
   },
 ]
 
@@ -49,7 +52,7 @@ const ProjectsSection = () => {
               <SlideUp offset="-300px 0px -300px 0px">
                 <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
                   <div className=" md:w-1/2">
-                    <Link href={project.link}>
+                    {project.link ? <Link href={project.link}>
                       <Image
                         src={project.image}
                         alt=""
@@ -57,11 +60,18 @@ const ProjectsSection = () => {
                         height={400}
                         className="rounded-xl shadow-xl hover:opacity-70"
                       />
-                    </Link>
+                    </Link> :
+                      <Image
+                        src={project.image}
+                        alt=""
+                        width={400}
+                        height={400}
+                        className="rounded-xl shadow-xl hover:opacity-70"
+                      />}
                   </div>
                   <div className="mt-8 md:w-1/2">
-                    <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
-                    <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
+                    <h1 className="text-2xl font-bold mb-6">{project.name}</h1>
+                    <p className="text-md leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                       {project.description}
                     </p>
                     <div className="flex flex-row align-bottom space-x-4">
@@ -86,6 +96,13 @@ const ProjectsSection = () => {
 
                       {project.youtube && <Link href={project.youtube} target="_blank">
                         <AiOutlineYoutube
+                          size={30}
+                          className="hover:-translate-y-1 transition-transform cursor-pointer"
+                        />
+                      </Link>}
+
+                      {project.pdf && <Link href={project.pdf} target="_blank">
+                        <AiOutlineFilePdf
                           size={30}
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
                         />
