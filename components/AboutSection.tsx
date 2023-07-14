@@ -57,8 +57,8 @@ const AboutSection = () => {
             </p>
             <br />
             <p>
-            I am passionate about cloud technologies and currently preparing to obtain the 
-            Azure Cloud Developer 204 certificate. Additionally, I have experience with 
+            I am passionate about cloud technologies and I have deep knowledge of 
+            Azure Cloud Developement. Additionally, I have experience with 
             IBM cloud infrastructure and have worked with both relational
              and non-relational databases. My skill set also extends to desktop application development
             </p>

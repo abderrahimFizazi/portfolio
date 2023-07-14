@@ -2,23 +2,27 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import SlideUp from "./SlideUp"
-import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
+import { BsGithub, BsArrowUpRightSquare, } from "react-icons/bs"
+import { AiOutlineInstagram ,AiOutlineYoutube} from "react-icons/ai"
 
 const projects = [
   {
-    name: "Thankful Thoughts",
-    description:
-      "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
-    image: "/thankfulthoughts.png",
-    github: "https://github.com/hqasmei/thankful-thoughts",
-    link: "https://thankfulthoughts.io/",
+    name: "Prblmsolvers",
+    description: "\"Modern problems require modern solutions\", Prblmsolvers is a social network dedicated to developers and their innovative problem-solving solutions.",
+    image: "/projects/prlms1.jpg",
+    instagram: "https://www.instagram.com/prblmsolvers/",
+    link: "https://prblmsolvers.com/",
+    technologies: ["NextJs", "Mongodb", "Azure", "Vercel", "Sendgrid", "Tailwinds"]
   },
   {
-    name: "PlatoIO",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/platoio.png",
-    github: "https://github.com/hqasmei/platoio",
-    link: "https://platoio.com/register",
+    name: "Documents manager",
+    description: "Creation of a docs managerProject dedicated to the Nrj+ club in our school that serves to manage documents for the G3EI department at the National School of Applied Sciences in Tanger. ",
+    image: "/projects/g3ei.png",
+    github: "https://github.com/abderrahimFizazi/g3ei",
+    link: " https://abderrahimfizazi.github.io/g3ei/",
+    technologies: ["ReactJs","Laravel", "Bootstrap"],
+    youtube: "https://www.youtube.com/watch?v=uunhRpZU7Eo"
+
   },
   {
     name: "Kator Family Photos",
@@ -49,8 +53,8 @@ const ProjectsSection = () => {
                       <Image
                         src={project.image}
                         alt=""
-                        width={1000}
-                        height={1000}
+                        width={400}
+                        height={400}
                         className="rounded-xl shadow-xl hover:opacity-70"
                       />
                     </Link>
@@ -61,26 +65,48 @@ const ProjectsSection = () => {
                       {project.description}
                     </p>
                     <div className="flex flex-row align-bottom space-x-4">
-                      <Link href={project.github} target="_blank">
+                      {project.github && <Link href={project.github} target="_blank">
                         <BsGithub
                           size={30}
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
                         />
-                      </Link>
-                      <Link href={project.link} target="_blank">
+                      </Link>}
+                      {project.link && <Link href={project.link} target="_blank">
                         <BsArrowUpRightSquare
                           size={30}
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
                         />
-                      </Link>
+                      </Link>}
+                      {project.instagram && <Link href={project.instagram} target="_blank">
+                        <AiOutlineInstagram
+                          size={30}
+                          className="hover:-translate-y-1 transition-transform cursor-pointer"
+                        />
+                      </Link>}
+
+                      {project.youtube && <Link href={project.youtube} target="_blank">
+                        <AiOutlineYoutube
+                          size={30}
+                          className="hover:-translate-y-1 transition-transform cursor-pointer"
+                        />
+                      </Link>}
+
                     </div>
+                    <br/>
+                    <div style={{ display: 'inline' }}>
+                      {project.technologies &&
+                        project.technologies.map((item, idx) => (
+                          <p key={idx} className="inline-block bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold">{item}</p>
+                        ))}
+                    </div>
+
                   </div>
                 </div>
               </SlideUp>
             </div>
           )
         })}
-        
+
       </div>
     </section>
   )
