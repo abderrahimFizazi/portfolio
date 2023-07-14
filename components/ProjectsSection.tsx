@@ -67,7 +67,8 @@ const ProjectsSection = () => {
                         width={400}
                         height={400}
                         className="rounded-xl shadow-xl hover:opacity-70"
-                      />}
+                      />
+}
                   </div>
                   <div className="mt-8 md:w-1/2">
                     <h1 className="text-2xl font-bold mb-6">{project.name}</h1>
