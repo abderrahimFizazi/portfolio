@@ -35,6 +35,14 @@ const projects = [
     youtube: "https://www.youtube.com/watch?v=VsRo9I5u5lY",
     pdf: "/projects/RapportSM.pdf"
   },
+  {
+    name: "RealTime Chat App",
+    description:
+      "Real-Time ChatApp is a Rails project leveraging web sockets for instant messaging, enabling users to engage in real-time conversations with each other.",
+    image: "/projects/chatapp.webp",
+    github: "https://github.com/abderrahimFizazi/chatroom.git",
+    technologies: ["Rails","Sockets", "Sqlite"],
+  },
 ]
 
 const ProjectsSection = () => {
